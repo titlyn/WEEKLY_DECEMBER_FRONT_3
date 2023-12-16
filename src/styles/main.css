@@ -1,6 +1,12 @@
+@import '/src/styles/components/part2.css';
+
 @font-face {
     font-family: "Monserrat";
     src : url("/assets/fonts/MontserratAlternates-Regular.ttf")
+}
+
+body {
+	font-family: 'Monserrat';
 }
 
 :root {
