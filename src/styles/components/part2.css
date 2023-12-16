@@ -1,0 +1,416 @@
+.page-head p {
+    color: var(--grey);
+}
+
+.page-head h1 {
+    font-size: 3rem;
+}
+
+#recent {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 6rem;
+    background-color: var(--champagne);
+}
+
+#recent .recent-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+#recent .recent-content .recent-card{
+    border: 2px solid #000;
+    border-radius: 1rem;
+    padding: 2%;
+    margin: 1rem;
+    background-color: #fff;
+}
+
+#recent .recent-content .recent-card .left-card {
+    display: flex;
+}
+
+#recent .recent-content .recent-card .left-card .right-card{
+    text-align: left;
+}
+
+#recent .recent-content .foot-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#recent .recent-content .foot-card .fc-right img{
+    height: 2rem;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+#recent .recent-content .foot-card .fc-right {
+    display: flex;
+    align-items: center;
+}
+
+#recent .recent-content .foot-card .fc-right span {
+    margin-right: 1rem;
+}
+
+#recent .recent-content .foot-card .fc-right .profile2 {
+    margin-left: -12px;
+}
+
+#recent .recent-left, .recent-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-line {
+    width: 100%;
+    display: flex;
+}
+
+.line {
+    border: 1px solid var(--grey);
+    width: 100%;
+}
+
+#recent .recent-content .recent-card .left-card img{
+    margin: 0 1rem 0 0;
+}
+
+#recent .recent-content .recent-card .foot-card {
+    margin-top: 1rem;
+}
+
+#recent .btn-primary {
+    border: 1px solid var(--grey);
+    font-family: 'Monserrat';
+    color: var(--grey);
+    border-radius: 5px;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    background-color: white;
+}
+
+#recent .recent-card h2 {
+    font-size: 19px;
+}
+
+#recent .shadow {
+    box-shadow: 0.8rem 0.8rem var(--blue);
+}
+
+#sparkle-recent{
+    position: absolute;
+    top: -15%;
+    right: -15%;
+}
+
+#sparkle-recent image{
+    height: 200px;
+    width: 100%;
+}
+
+#recent .left-card h4, .vermillon {
+    color: var(--vermillon);
+}
+
+#recent .left-card p {
+    color: var(--grey);
+}
+
+#recent .recent-foot {
+    margin-top: 6%;
+}
+
+#recent .recent-foot button {
+    border: none;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Monserrat';
+    padding: 1.5rem 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 5px 5px gray;
+}
+
+#sponsor {
+    text-align: center;
+    padding: 5rem 0 5rem 0;
+}
+
+#sponsor .top-cards, .bottom-cards {
+    display: flex;
+    justify-content: center;
+}
+
+#sponsor .sponsor-content {
+    position: relative;
+    margin-top: 5rem;
+}
+
+#sponsor .sponsor-card {
+    border: 2px solid var(--grey);
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    height: 20rem;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 3rem;
+    gap: 1rem;
+}
+
+#sponsor .title-sponsor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#sponsor .title-sponsor p {
+    background-color: var(--vermillon);
+    padding: 0.5rem;
+    color: var(--champagne);
+    border-radius: 0.3rem;
+}
+
+
+#sponsor .sponsor-card .sc-line {
+    display: flex;
+    align-items: center;
+
+}
+
+#sponsor .sponsor-card .sc-button {
+    display: flex;
+    align-items: center;
+    margin-top: 4rem;
+    justify-content: space-between;
+}
+
+#sponsor .sponsor-card .sc-button .lsc button{
+    border: none;
+    padding: 1.5rem 2rem;
+    font-family: 'Monserrat';
+    color: #fff;
+    background-color: #000;
+    border-radius: 0.5rem;
+    box-shadow: 5px 5px rgb(158, 158, 158);
+}
+
+#sponsor .sponsor-card .sc-button .rsc {
+    line-height: 5px;
+}
+
+#sponsor .sponsor-card .sc-button .rsc h3 {
+    color: var(--vermillon);
+    font-size: 20px;
+}
+
+#sponsor .sponsor-card .sc-button .rsc p{
+    font-size: 12px;
+    color: gray;
+}
+
+#sponsor .border {
+    border: 2px solid var(--vermillon);
+    background-color: var(--champagne);
+}
+
+#sponsor .dot {
+    background-color: #000;
+    height: 4px;
+    width: 4px;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+}
+
+#sponsor-star {
+    position: absolute;
+    right: -9%;
+    top: -8%;
+}
+
+#sponsor .bottom-cards h4 {
+    color: var(--grey);
+}
+
+#sponsor .bottom-cards .sponsor-card {
+    line-height: 2rem;
+}
+
+#sponsor .bottom-cards .sponsor-card .sc-text {
+    font-size: 15px;
+}
+
+#sponsor .bolder {
+    font-weight: bold;
+}
+
+#sponsor-tornado {
+    position: absolute;
+    bottom: -10%;
+    left: 3%;
+}
+
+#article {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+#article .article-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;   
+}
+
+#article .article-card-content {
+    display: flex;
+    width: 80%;
+}
+
+#article .article-card {
+    border: 2px solid #000;
+    border-radius: 0.8rem;
+    padding: 1rem;
+    margin: 1rem;
+    text-align: left;
+}
+
+#article .article-card .top-ac img {
+    width: 100%;
+}
+
+.shadow {
+    box-shadow: 0.8rem 0.8rem #000;
+}
+
+#article .article-card .vermillon{
+    color: var(--vermillon);
+}
+
+#article .article-card h2 {
+    font-size: 28px;
+}
+
+#article .article-card h4, p {
+    color: var(--grey);
+}
+
+#article .article-card .line-spons {
+    border: 1px solid rgb(185, 183, 183);
+    margin: 2rem 0;
+}
+
+#article .article-card .article-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#article .article-card button {
+    background-color: #fff;
+    border: 1px solid var(--grey);
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    font-family: 'Monserrat';
+    color: var(--grey);
+}
+
+#article .article-footer {
+    margin-top: 5rem;
+}
+
+#article .article-footer button {
+    background-color: #000;
+    border: none;
+    color: #fff;
+    font-family: 'Monserrat';
+    font-size: 16px;
+    padding: 1.5rem 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 5px 5px gray;
+}
+
+#available {
+    position: relative;
+    text-align: center;
+    background-color: rgb(222, 222, 253);
+    margin-top: 2rem;
+}
+
+#available .mark {
+    display: flex;
+    justify-content: center;
+}
+
+#available .mark p {
+    border-radius: 0.3rem;
+    padding: 0.4rem 0.1rem;
+    color: var(--vermillon);
+    font-weight: bold;
+    border: 2px solid var(--vermillon);
+    width: 5%;
+}
+
+#available .page-head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+
+#available .page-head .title-head {
+    width: 30%;
+}
+
+#available .available-content {
+    margin-top: 7rem;
+}
+
+#available .available-content button {
+    background-color: #000;
+    border: none;
+    color: #fff;
+    font-family: 'Monserrat';
+    font-size: 16px;
+    padding: 1.5rem 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 5px 5px gray; 
+}
+
+#phone1 {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: 0;
+    bottom: -0.5rem;
+}
+
+#phone1 image {
+    width: 400px;
+    height: 400px;
+}
+
+#phone2 {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    right: -3.3%;
+    bottom: 0;
+}
+
+#phone2 image {
+    width: 600px;
+    height: 600px;
+}
+
+
+
