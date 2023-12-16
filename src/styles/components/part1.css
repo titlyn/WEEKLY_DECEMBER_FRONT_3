@@ -1,0 +1,172 @@
+header, #podcast{
+    background-color: var(--champagne);
+}
+
+header, header nav, header nav .left, header nav .right, nav a{
+    display: flex;
+    align-items: center;
+}
+
+header{
+    z-index: 16;
+    gap: 7.6rem;
+    padding: 1.6rem var(--horiz-padding);
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+header .logo{
+    width: 4.4rem;
+    height: 4.4rem;
+}
+
+header nav{
+    width: 100%;
+    justify-content: space-between;
+}
+
+nav a{
+    align-items: center;
+	justify-content: center;
+}
+
+header nav #spacer{
+    display: none;
+}
+
+header nav .left{
+    gap: 3.4rem;
+}
+
+header nav .right{
+    gap: 1rem;
+}
+
+#nav-toggler{
+    display: none;
+}
+
+nav button, #recent-btn{
+    padding: 0.6rem 1.4rem;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: normal;
+    letter-spacing: .05rem;
+
+    border: 2px solid var(--black);
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+}
+
+nav a{
+    gap: .3rem;
+}
+
+nav a img{
+    width: 1rem;
+    height: 1rem;
+}
+
+nav button{
+    background-color: var(--black);
+    color: var(--white);
+}
+
+@media only screen and (max-width: 992px) {
+    header{
+        padding: .8rem var(--horiz-padding);
+        box-shadow: 0px 7px 10px 2px #0000000D;
+    }
+
+    header .logo{
+        width: 3.4rem;
+        height: 3.4rem;
+    }
+
+    nav, nav .left, nav .right{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav .left, nav .right{
+        width: 100%;
+        max-width: 450px;
+    }
+
+    nav .right > * {
+        width: 100%;
+        min-width: max-content;
+    }
+
+    header nav #spacer{
+        display: flex;
+    }
+
+	#nav-toggler{
+        z-index: 17;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        width: 1.8rem;
+        aspect-ratio: 1;
+
+        border: none;
+        padding: 0.2rem;
+        background-color: transparent;
+    }
+
+    #nav-toggler img{
+        display: flex;
+        width: 100%;
+        height: auto;
+        z-index: 11;
+
+        position: absolute;
+    }
+
+    #nav-toggler #quit-img {
+        opacity: 0;
+    }
+
+    nav.visible~#nav-toggler #quit-img {
+        opacity: 1;
+    }
+
+    nav.visible~#nav-toggler #menu-img {
+        opacity: 0;
+    }
+
+    header nav {
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        right: 100%;
+        width: 100%;
+        height: 100vh;
+        gap: 3rem;
+        padding: var(--vert-padding) var(--horiz-padding) calc(var(--vert-padding) * 1.2);
+        background-color: var(--champagne);
+        opacity: 0;
+    }
+
+    nav.visible {
+        right: 0%;
+        z-index: 16;
+        opacity: 1;
+    }
+
+    nav>* {
+        width: 100%;
+        justify-content: center;
+    }
+}
