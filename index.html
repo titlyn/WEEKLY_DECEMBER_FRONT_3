@@ -4,9 +4,9 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="src/styles/main.css">
-    <link rel="shortcut icon" href="assets/img/logo.svg">
+    <title>Pod of cast</title>
+    <link rel="stylesheet" href="./src/styles/main.css">
+    <link rel="shortcut icon" href="./assets/icons/logo.svg">
 </head>
 
 <body>
@@ -14,19 +14,29 @@
     <div id="main-content">
         <header>
             <a href="/">
-                <img src="./assets/icons/logo.svg" alt="logo">
+                <img src="./assets/icons/logo.svg" class="logo" alt="logo">
             </a>
+
             <nav>
+                <div id="spacer"></div>
                 <div class="left">
-                    <a href="#">Episodes</a>
-                    <a href="#">About</a>
-                    <a href="#">More</a>
+                    <a href="#episodes">Episodes</a>
+                    <a href="#about">About</a>
+                    <a href="#">
+                        <span>More</span>
+                        <img src="./assets/icons/btn/arrow-down.svg" alt="arrow donw">
+                    </a>
                 </div>
                 <div class="right">
-                    <a href="#">Recent Episodes</a>
+                    <a href="#" id="recent-btn">Recent Episodes</a>
                     <button name="subscribe">Subscribe</button>
                 </div>
             </nav>
+
+            <button id="nav-toggler" name="nav-toggler">
+                <img src="./assets/icons/menu/menu.svg" id="menu-img" alt="hamburger menu">
+                <img src="./assets/icons/menu/delete.svg" id="quit-img" alt="close menu">
+            </button>
         </header>
 
         <div id="podcast">
@@ -60,24 +70,49 @@
 
             </div>
 
-            <div class="cards">
+            <div class="cards" id="episodes">
                 <div class="card">
+                    <div class="platform">
+                        <img src="./assets/icons/podcast/google-mini.svg" alt="google podcast">
+                        <img src="./assets/icons/podcast/spotify-mini.svg" alt="spotify">
+                        <img src="./assets/icons/podcast/youtube-mini.svg" alt="youtube">
+                    </div>
                     <img src="./assets/vectorized/image5.webp" alt="Tesla Autopilot">
                     <p>Tesla Autopilot</p>
                 </div>
                 <div class="card">
+                    <div class="platform">
+                        <img src="./assets/icons/podcast/google-mini.svg" alt="google podcast">
+                        <img src="./assets/icons/podcast/spotify-mini.svg" alt="spotify">
+                        <img src="./assets/icons/podcast/youtube-mini.svg" alt="youtube">
+                    </div>
                     <img src="./assets/vectorized/image1.webp" alt="confidence">
                     <p>Self–confidence</p>
                 </div>
                 <div class="card">
+                    <div class="platform">
+                        <img src="./assets/icons/podcast/google-mini.svg" alt="google podcast">
+                        <img src="./assets/icons/podcast/spotify-mini.svg" alt="spotify">
+                        <img src="./assets/icons/podcast/youtube-mini.svg" alt="youtube">
+                    </div>
                     <img src="./assets/vectorized/image2.webp" alt="perplexed">
                     <p>Perplexed Mind</p>
                 </div>
                 <div class="card">
+                    <div class="platform">
+                        <img src="./assets/icons/podcast/google-mini.svg" alt="google podcast">
+                        <img src="./assets/icons/podcast/spotify-mini.svg" alt="spotify">
+                        <img src="./assets/icons/podcast/youtube-mini.svg" alt="youtube">
+                    </div>
                     <img src="./assets/vectorized/image3.webp" alt="women's rights">
                     <p>Women’s Rights</p>
                 </div>
                 <div class="card">
+                    <div class="platform">
+                        <img src="./assets/icons/podcast/google-mini.svg" alt="google podcast">
+                        <img src="./assets/icons/podcast/spotify-mini.svg" alt="spotify">
+                        <img src="./assets/icons/podcast/youtube-mini.svg" alt="youtube">
+                    </div>
                     <img src="./assets/vectorized/image4.webp" alt="social class">
                     <p>Social Class</p>
                 </div>
@@ -671,7 +706,7 @@
             </div>
         </footer>
     </div>
-    <script type="module" src="src/js/main.js"></script>
+    <script type="module" src="./src/js/main.js"></script>
 </body>
 
 </html>
