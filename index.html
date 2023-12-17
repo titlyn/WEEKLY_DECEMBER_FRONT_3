@@ -10,7 +10,13 @@
 </head>
 
 <body>
-    <div id="loader"></div>
+    <div id="loader">
+            <div id="loader-content">
+                <div class="img-container">
+                    <img src="./assets/icons/logo.svg" alt="logo">
+                </div>
+            </div>
+        </div>
     <div id="main-content">
         <header>
             <a href="/">
@@ -71,9 +77,15 @@
 
                 <div class="svg-container star">
                     <svg width="143" height="219" viewBox="0 0 143 219" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M67.5 18.0002C50.9609 65.5502 48.11 71.2846 7.98767 87.9709C7.13472 88.3257 7.18127 89.5756 8.0529 89.8815C58.5 107.59 58.5 125.44 58.5 152C67 89.0002 82.6598 89.0002 132 84.5005C27 94.0762 83.5 -28 67.5 18.0002Z" stroke="#81ADC8" stroke-width="14" stroke-linejoin="round"/>
-                        <path d="M26.1937 183.521C22.4158 194.263 21.5523 196.2 13.49 199.689C12.639 200.058 12.6754 201.31 13.5396 201.646C23.9881 205.714 23.9881 209.913 23.9881 216C26.0711 200.73 29.9087 200.73 42 199.639C16.2688 201.96 30.1146 172.371 26.1937 183.521Z" stroke="black" stroke-width="6" stroke-linejoin="round"/>
-                        <path d="M114.526 143.889C108.472 161.042 107.251 163.644 93.5075 169.408C92.6512 169.767 92.6923 171.018 93.5639 171.338C111.111 177.777 111.111 184.352 111.111 194C114.336 170.44 120.278 170.44 139 168.758C99.1581 172.339 120.597 126.687 114.526 143.889Z" stroke="#CD4631" stroke-width="8" stroke-linejoin="round"/>
+                        <path
+                            d="M67.5 18.0002C50.9609 65.5502 48.11 71.2846 7.98767 87.9709C7.13472 88.3257 7.18127 89.5756 8.0529 89.8815C58.5 107.59 58.5 125.44 58.5 152C67 89.0002 82.6598 89.0002 132 84.5005C27 94.0762 83.5 -28 67.5 18.0002Z"
+                            stroke="#81ADC8" stroke-width="14" stroke-linejoin="round" />
+                        <path
+                            d="M26.1937 183.521C22.4158 194.263 21.5523 196.2 13.49 199.689C12.639 200.058 12.6754 201.31 13.5396 201.646C23.9881 205.714 23.9881 209.913 23.9881 216C26.0711 200.73 29.9087 200.73 42 199.639C16.2688 201.96 30.1146 172.371 26.1937 183.521Z"
+                            stroke="black" stroke-width="6" stroke-linejoin="round" />
+                        <path
+                            d="M114.526 143.889C108.472 161.042 107.251 163.644 93.5075 169.408C92.6512 169.767 92.6923 171.018 93.5639 171.338C111.111 177.777 111.111 184.352 111.111 194C114.336 170.44 120.278 170.44 139 168.758C99.1581 172.339 120.597 126.687 114.526 143.889Z"
+                            stroke="#CD4631" stroke-width="8" stroke-linejoin="round" />
                     </svg>
                 </div>
             </div>
@@ -163,18 +175,20 @@
                 <div class="line"></div>
             </div>
 
-            <svg width="150" height="154" viewBox="0 0 150 154" fill="none" xmlns="http://www.w3.org/2000/svg">
+        </div>
+
+        <div id="about">
+            <svg class="scribble-top" width="150" height="154" viewBox="0 0 150 154" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M54 2C54.0002 120.75 82.6905 85.7939 86.822 77.8929C122.305 10.0357 42.4671 47.5357 56.6612 152"
                     stroke="#CD4631" stroke-width="2.5" stroke-linecap="round" />
             </svg>
-        </div>
-
-        <div id="about">
             <h2>Talk. Listen. Get inspired by every minute of it.</h2>
             <div id="parrallele-img">
                 <div class="card">
-                    <svg width="275" height="275" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg id="cloud" width="275" height="275" viewBox="0 0 275 275" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M56.8516 209.033C50.4038 200.294 43.9872 212.047 46.928 218.841C48.1017 221.552 48.215 224.818 51.3326 225.733C52.2975 226.016 53.1586 227.177 54.2248 227.177C56.0228 227.177 56.6913 226.741 58.2844 226.196"
                             stroke="#4D4D4D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
@@ -206,10 +220,10 @@
                         <path
                             d="M88.3733 205.601C88.3733 211.653 92.5911 217.447 94.1311 222.982C94.7867 225.337 93.9386 225.706 91.4777 225.706C89.0818 225.706 87.8579 225.519 86.4629 227.667"
                             stroke="#4D4D4D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                        <path
+                        <path class="medium-cloud"
                             d="M164.045 148.776C160.906 146.507 158.959 146.813 156.096 149.464C153.422 151.941 152.56 156.534 154.964 159.485C158.693 164.063 167.123 162.68 169.889 157.876C171.231 155.545 170.821 157.36 171.705 158.075C173.905 159.855 175.037 159.987 177.247 157.892C179.904 155.373 182.063 145.216 175.51 146.556C174.782 146.706 172.443 148.325 173.544 148.1C175.001 147.802 174.97 146.008 174.609 144.877C173.644 141.861 169.425 140.39 166.768 141.511C164.783 142.348 164.279 144.785 162.682 145.707C161.139 146.598 155.02 151.816 159.759 151.251"
                             stroke="#4D4D4D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                        <path
+                        <path class="small-cloud"
                             d="M125.943 162.99C123.52 162.517 120.666 161.811 120.054 165.101C119.599 167.547 122.099 170.621 124.693 170.212C125.597 170.069 128.576 168.679 129.165 169.268C130.644 170.747 131.536 169.041 132.443 167.601C133.502 165.919 131.899 160.508 129.693 160.018C128.291 159.706 122.764 163.65 123.443 163.99"
                             stroke="#4D4D4D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
                         <path
@@ -279,6 +293,14 @@
                     </svg>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio. </p>
                 </div>
+            </div>
+
+            <div id="quote">
+                <p class="quote">"</p>
+                <p>
+                    One of the best daily podcasts that
+                    covers every topic on Spotify.
+                </p>
             </div>
         </div>
 
