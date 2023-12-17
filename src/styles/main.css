@@ -13,10 +13,10 @@
 	--blue: #81ADC8;
 	--champagne: #F7EDE8;
 	--vermillon: #CD4631;
-	
-	--horiz-padding: 15%;
+
+	--horiz-padding: 10%;
 	--vert-padding: 4rem;
-	
+
 	font-size: 19px;
 	color: var(--black);
 }
@@ -95,14 +95,33 @@ h6 {
 	position: relative;
 }
 
-#main-content > *:not(header){
+#main-content>*:not(header) {
 	z-index: 10;
+}
+
+.primary-btn {
+	display: flex;
+	padding: 1.2rem 2.8rem;
+	justify-content: center;
+	align-items: center;
+
+	color: var(--white);
+	border-radius: 0.5rem;
+	background: var(--black);
+	border: 1px solid var(--black);
+	box-shadow: .4rem .4rem 0px 0px rgba(0, 0, 0, 0.25);
+
+	font-size: 0.875rem;
+	font-weight: 500;
+	line-height: 160%;
+	letter-spacing: .1rem;
+	text-transform: uppercase;
 }
 
 @media only screen and (max-width: 1600px) {
 	:root {
 		--horiz-padding: 9.5%;
-		--vert-padding: 2rem;
+		--vert-padding: 3.5rem;
 		font-size: 16px;
 	}
 }

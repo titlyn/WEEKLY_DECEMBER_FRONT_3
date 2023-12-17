@@ -1,54 +1,155 @@
-header, #podcast{
+.vermillon {
+    color: var(--vermillon);
+}
+
+header,
+#podcast {
     background-color: var(--champagne);
 }
 
-header, header nav, header nav .left, header nav .right, nav a{
+header,
+header nav,
+header nav .left,
+header nav .right,
+nav a,
+#dropdown,
+#dropdown button,
+#dropdown-content,
+#podcast,
+#podcast .top,
+#podcast .main-content,
+#podcast #episodes,
+#podcast #episodes .card,
+.top .main-content .descri {
     display: flex;
     align-items: center;
 }
 
-header{
+header {
     z-index: 16;
+    width: 100%;
     gap: 7.6rem;
     padding: 1.6rem var(--horiz-padding);
     justify-content: space-between;
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
 }
 
-header .logo{
+header .logo {
     width: 4.4rem;
     height: 4.4rem;
 }
 
-header nav{
+header nav {
     width: 100%;
     justify-content: space-between;
 }
 
-nav a{
+nav a,
+#dropdown button {
+    font-size: 1rem;
+    gap: .3rem;
     align-items: center;
-	justify-content: center;
+    justify-content: center;
 }
 
-header nav #spacer{
+#dropdown {
+    flex-direction: column;
+    position: relative;
+}
+
+#dropdown-content {
+    display: none;
+    flex-direction: column;
+    background-color: var(--black);
+    color: var(--white);
+    padding: .6rem 0;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+#dropdown-content a {
+    width: 100%;
+    padding: .4rem .8rem;
+    transition: color .25s ease-in-out, background-color .25s ease-in-out;
+    -webkit-transition: color .25s ease-in-out, background-color .25s ease-in-out;
+    -moz-transition: color .25s ease-in-out, background-color .25s ease-in-out;
+    -ms-transition: color .25s ease-in-out, background-color .25s ease-in-out;
+    -o-transition: color .25s ease-in-out, background-color .25s ease-in-out;
+}
+
+#dropdown-content a:hover {
+    background-color: var(--champagne);
+    color: var(--black);
+}
+
+#dropdown-content a.active {
+    background-color: var(--vermillon);
+}
+
+nav .left>a {
+    position: relative;
+}
+
+nav .left>a::before {
+    content: "";
+    position: absolute;
+    top: calc(100% + .2rem);
+    width: 0;
+    border-bottom: .2rem solid var(--vermillon);
+    transition: width .25s ease-in-out;
+    -webkit-transition: width .25s ease-in-out;
+    -moz-transition: width .25s ease-in-out;
+    -ms-transition: width .25s ease-in-out;
+    -o-transition: width .25s ease-in-out;
+}
+
+nav .left>a:hover::before,
+nav .left>a.active::before {
+    width: 2rem;
+}
+
+#dropdown button {
+    background-color: transparent;
+    border: none;
+}
+
+#dropdown:hover #dropdown-content {
+    display: flex;
+    align-items: flex-start;
+    gap: .6rem;
+}
+
+#dropdown:hover #dropdown-content a,
+#dropdown:hover #dropdown-content {
+    /*opacity: 0;
+        */
+    animation: fade-in 0.25s cubic-bezier(0.19, 0.35, 0, 1) calc(.05s * var(--i)) 1 forwards;
+    -webkit-animation: fade-in 0.25s cubic-bezier(0.19, 0.35, 0, 1) calc(.05s * var(--i)) 1 forwards;
+    animation-fill-mode: both;
+}
+
+header nav #spacer {
     display: none;
 }
 
-header nav .left{
+header nav .left {
     gap: 3.4rem;
 }
 
-header nav .right{
+header nav .right {
     gap: 1rem;
 }
 
-#nav-toggler{
+#nav-toggler {
     display: none;
 }
 
-nav button, #recent-btn{
+nav .right button,
+#recent-btn {
     padding: 0.6rem 1.4rem;
     font-weight: 600;
     font-size: 1rem;
@@ -65,52 +166,115 @@ nav button, #recent-btn{
     -o-border-radius: .5rem;
 }
 
-nav a{
-    gap: .3rem;
-}
-
-nav a img{
+nav a img {
     width: 1rem;
     height: 1rem;
 }
 
-nav button{
+nav .right button {
     background-color: var(--black);
     color: var(--white);
 }
 
+#podcast {
+    flex-direction: column;
+    padding: calc(2 * var(--vert-padding)) 0;
+}
+
+#podcast .top {
+    justify-content: space-between;
+    width: 100%;
+}
+
+#podcast .top .main-content {
+    flex-direction: column;
+    gap: 3.5rem;
+    width: 44%;
+}
+
+#podcast .top .svg-container {
+    width: 28%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 5.3rem;
+}
+
+#podcast .top .svg-container:nth-of-type(1) {
+    justify-content: flex-start;
+}
+
+#podcast .top .svg-container:nth-of-type(1) svg {
+    height: 36rem;
+    width: auto;
+}
+
+#podcast .top .svg-container.star svg {
+    height: 13rem;
+    width: auto;
+}
+
+.top .main-content .descri {
+    flex-direction: column;
+    gap: 2.5rem;
+    text-align: center;
+    width: 100%;
+}
+
+.top .main-content h1 {
+    font-size: 5.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: -0.24rem;
+}
+
+.top .main-content p {
+    width: 50%;
+    max-width: 383px;
+    color: var(--grey);
+    font-weight: 500;
+    line-height: 160%;
+    letter-spacing: .008rem;
+}
+
 @media only screen and (max-width: 992px) {
-    header{
+    header {
         padding: .8rem var(--horiz-padding);
         box-shadow: 0px 7px 10px 2px #0000000D;
     }
 
-    header .logo{
+    header .logo {
         width: 3.4rem;
         height: 3.4rem;
     }
 
-    nav, nav .left, nav .right{
+    nav,
+    nav .left,
+    nav .right {
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
 
-    nav .left, nav .right{
+    nav .left,
+    nav .right {
         width: 100%;
         max-width: 450px;
     }
 
-    nav .right > * {
+    nav .right>* {
         width: 100%;
         min-width: max-content;
     }
 
-    header nav #spacer{
+    header nav #spacer {
         display: flex;
     }
 
-	#nav-toggler{
+    #nav-toggler {
         z-index: 17;
         display: flex;
         justify-content: center;
@@ -125,7 +289,7 @@ nav button{
         background-color: transparent;
     }
 
-    #nav-toggler img{
+    #nav-toggler img {
         display: flex;
         width: 100%;
         height: auto;
@@ -159,14 +323,138 @@ nav button{
         opacity: 0;
     }
 
+    nav,
+    #nav-toggler svg {
+        transition: opacity .5s ease-in-out;
+        -webkit-transition: opacity .5s ease-in-out;
+        -moz-transition: opacity .5s ease-in-out;
+        -ms-transition: opacity .5s ease-in-out;
+        -o-transition: opacity .5s ease-in-out;
+    }
+
     nav.visible {
         right: 0%;
         z-index: 16;
         opacity: 1;
     }
 
+    nav.visible .left a,
+    nav.visible .right>* {
+        /*opacity: 0;
+        */
+        animation: fade-in 0.25s cubic-bezier(0.19, 0.35, 0, 1) calc(.05s * var(--i)) 1 forwards;
+        -webkit-animation: fade-in 0.25s cubic-bezier(0.19, 0.35, 0, 1) calc(.05s * var(--i)) 1 forwards;
+        animation-fill-mode: both;
+    }
+
     nav>* {
         width: 100%;
         justify-content: center;
+    }
+
+    #dropdown-content {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--champagne);
+        border: 2px solid;
+        position: absolute;
+        top: calc(100% + .6rem);
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+    }
+
+    #dropdown:hover #dropdown-content {
+        align-items: inherit;
+    }
+
+    #podcast .top .svg-container {
+        padding-right: 3rem;
+    }
+
+    #podcast .top .svg-container.star svg {
+        height: 10rem;
+        width: auto;
+    }
+
+    .top .main-content p {
+        width: 80%;
+        max-width: 250px;
+    }
+}
+
+@media only screen and (max-width: 1500px) {}
+
+@media only screen and (max-width: 680px) {
+    #podcast {
+        flex-direction: column;
+        padding: calc(2 * var(--vert-padding)) var(--horiz-padding);
+    }
+
+    #podcast .top {
+        flex-direction: column;
+        position: relative;
+        gap: 2.2rem;
+    }
+
+    #podcast .top .main-content {
+        width: 100%;
+        order: 2;
+    }
+
+    .top .main-content .descri>* {
+        width: 100%;
+    }
+
+    #podcast .top .svg-container {
+        height: 6rem;
+        width: 100%;
+    }
+
+    #podcast .top .svg-container:nth-of-type(1) {
+        order: 3;
+        height: 10rem;
+    }
+
+    #podcast .top .svg-container.star {
+        order: 1;
+    }
+
+    #podcast .top .svg-container.star svg {
+        position: absolute;
+        right: 0;
+        height: 6rem;
+    }
+
+    #podcast .top .svg-container:nth-of-type(1) svg {
+        /* transform: rotateZ(-45deg); */
+        position: absolute;
+
+        height: 14rem;
+        left: calc(-1*var(--horiz-padding));
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateX(-4rem);
+        -webkit-transform: translateX(-4rem);
+        -moz-transform: translateX(-4rem);
+        -ms-transform: translateX(-4rem);
+        -o-transform: translateX(-4rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
     }
 }
