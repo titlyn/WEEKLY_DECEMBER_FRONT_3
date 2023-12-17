@@ -1,4 +1,5 @@
 export const NAV_WRAPPER = document.querySelector('nav')
+export const NAV_LINKS = document.querySelectorAll('nav a')
 
 /**
  * @type {HTMLButtonElement}
