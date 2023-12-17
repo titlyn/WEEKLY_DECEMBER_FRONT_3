@@ -372,7 +372,7 @@
     color: var(--vermillon);
     font-weight: bold;
     border: 2px solid var(--vermillon);
-    width: 5%;
+    width: 50px;
 }
 
 #available .page-head {
@@ -454,7 +454,7 @@
 }
 
 footer {
-    padding: 4rem;
+    padding: 8rem;
 }
 
 footer .footer-content {
@@ -559,7 +559,7 @@ footer .footer-content .right-footer .links .media-end {
 footer .footer-foot {
     display: flex;
     justify-content: space-between;
-    margin: 2rem 0 0 0 ;
+    margin: 2rem 0 0 0 ;    
 }
 
 footer .footer-foot .left-ff {
@@ -570,7 +570,7 @@ footer .footer-foot .right-ff {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 10%;
+    /* width: 10%; */
 }
 
 footer .footer-foot .right-ff .dot {
@@ -735,8 +735,8 @@ footer .footer-foot .right-ff .dot {
 
     #sparkle {
         position: absolute;
-        top: 450px;
-        left: 390px;    
+        top: 490px;
+        left: 340px;    
     }
 }
 
