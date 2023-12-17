@@ -20,7 +20,9 @@ nav a,
 #podcast .main-content,
 #podcast #episodes,
 #podcast #episodes .card,
-.top .main-content .descri {
+.top .main-content .descri,
+.viewport,
+#podcast-sponsor {
     display: flex;
     align-items: center;
 }
@@ -31,7 +33,7 @@ header {
     gap: 7.6rem;
     padding: 1.6rem var(--horiz-padding);
     justify-content: space-between;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
 }
@@ -178,7 +180,11 @@ nav .right button {
 
 #podcast {
     flex-direction: column;
-    padding: calc(2 * var(--vert-padding)) 0;
+    gap: 6rem;
+}
+
+.podcast>* {
+    padding-top: var(--vert-padding);
 }
 
 #podcast .top {
@@ -239,6 +245,204 @@ nav .right button {
     line-height: 160%;
     letter-spacing: .008rem;
 }
+
+#episodes {
+    flex-direction: column;
+    align-items: flex-start !important;
+    width: 100%;
+    overflow: hidden;
+    /* border: 4px solid cyan; */
+    padding-bottom: 1rem;
+    /* scroll-snap-type: x mandatory; */
+}
+
+#episodes:hover {
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-arrow-color: transparent;
+    scrollbar-color: var(--vermillon) transparent;
+}
+
+#episodes:hover::-webkit-scrollbar {
+    opacity: 1;
+}
+
+#episodes::-webkit-scrollbar {
+    opacity: 0;
+    height: 1rem;
+}
+
+#episodes::-webkit-scrollbar-button {
+    opacity: 0;
+}
+
+#episodes::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#episodes::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    background: var(--vermillon);
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+}
+
+#episodes .viewport {
+    margin: 0 2rem;
+    width: max-content;
+    gap: 1.2rem;
+}
+
+#episodes .card {
+    flex-direction: column;
+    width: 23rem;
+    aspect-ratio: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: .6rem;
+    -webkit-border-radius: .6rem;
+    -moz-border-radius: .6rem;
+    -ms-border-radius: .6rem;
+    -o-border-radius: .6rem;
+}
+
+#episodes .card .content {
+    padding: 1.1rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#episodes .card .content p {
+    color: var(--blue);
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+}
+
+#episodes .card:hover>img {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
+.card .platform {
+    display: flex;
+    gap: 0.4rem;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.card .platform img {
+    width: 1.5rem;
+    height: auto;
+}
+
+.card .platform img:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
+#episodes .card>img {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+#episodes .card img {
+    transition: transform .25s ease-in-out;
+    -webkit-transition: transform .25s ease-in-out;
+    -moz-transition: transform .25s ease-in-out;
+    -ms-transition: transform .25s ease-in-out;
+    -o-transition: transform .25s ease-in-out;
+}
+
+#podcast-sponsor {
+    flex-direction: column;
+    padding: 1.25rem var(--horiz-padding);
+    width: 100%;
+    gap: 1.4rem;
+}
+
+#podcast-sponsor .line{
+    display: flex;
+    width: 100%;
+    border-bottom: .1rem solid var(--grey);
+}
+
+#podcast-sponsor .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 2rem;
+    
+    position: relative;
+}
+
+#podcast-sponsor p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 140%;
+    text-wrap : nowrap;
+}
+
+#podcast-sponsor .imgs{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    height: 4rem;
+
+    justify-content: flex-start;
+}
+
+#podcast-sponsor .imgs img{
+    height: 2rem;
+    margin: 1rem 4rem;
+}
+
+#podcast-sponsor .single-track{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    width: max-content;
+    display: flex;
+}
+#podcast-sponsor .single-track:nth-of-type(1){
+    animation: slide 8s linear 0s infinite forwards;
+    -webkit-animation: slide 8s linear 0s infinite forwards;
+    animation-fill-mode: both;
+}
+#podcast-sponsor .single-track:nth-of-type(2){
+    animation: slide 8s linear 4s infinite forwards;
+    -webkit-animation: slide 8s linear 4s infinite forwards;
+    animation-fill-mode: both;
+}
+/* slide */
 
 @media only screen and (max-width: 992px) {
     header {
@@ -357,7 +561,6 @@ nav .right button {
         flex-direction: column;
         align-items: center;
         background-color: var(--champagne);
-        border: 2px solid;
         position: absolute;
         top: calc(100% + .6rem);
         left: 50%;
@@ -389,6 +592,24 @@ nav .right button {
 
 @media only screen and (max-width: 1500px) {}
 
+@media only screen and (max-width: 992px) {
+    #podcast-sponsor .content{
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 724px) {
+    #podcast-sponsor .single-track:nth-of-type(2){
+        display: none;
+    }
+
+    #podcast-sponsor .single-track:nth-of-type(1){
+        animation: slide 12s linear 0s infinite forwards;
+        -webkit-animation: slide 12s linear 0s infinite forwards;
+        animation-fill-mode: both;
+}
+}
+
 @media only screen and (max-width: 680px) {
     #podcast {
         flex-direction: column;
@@ -399,6 +620,7 @@ nav .right button {
         flex-direction: column;
         position: relative;
         gap: 2.2rem;
+        padding: 0;
     }
 
     #podcast .top .main-content {
@@ -457,4 +679,9 @@ nav .right button {
         -ms-transform: translateX(0);
         -o-transform: translateX(0);
     }
+}
+
+@keyframes slide {
+    0% {left: -140vw}
+    100% {left: 140vw}
 }
