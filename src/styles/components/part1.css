@@ -663,7 +663,8 @@ nav .right button {
 
 @media only screen and (max-width: 724px) {
     #podcast-sponsor .single-track:nth-of-type(2) {
-        display: none;
+        /* display: none; */
+        opacity: 0;
     }
 
     #podcast-sponsor .single-track:nth-of-type(1) {
