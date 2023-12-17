@@ -669,12 +669,12 @@ footer .footer-foot .right-ff .dot {
     #sparkle-sponsor {
         position: absolute;
         transform: matrix(-1, 0, 0, 1, 0, 0);
-        left: -80px;
+        left: -40px;
         top: -70px;
     }
     #sponsor-star {
         position: absolute;
-        right: -70px;
+        right: -100px;
         top: -5px;
         z-index: -1;
     }
@@ -682,7 +682,7 @@ footer .footer-foot .right-ff .dot {
     #sponsor-tornado {
         position: absolute;
         bottom: -60px;
-        left: 120px;
+        left: 60px;
         z-index: -1;
     }
 
@@ -721,7 +721,7 @@ footer .footer-foot .right-ff .dot {
     #sparkle-sponsor {
         position: absolute;
         transform: matrix(-1, 0, 0, 1, 0, 0);
-        left: -130px;
+        left: -160px;
         top: -70px;
     }
 
@@ -735,8 +735,8 @@ footer .footer-foot .right-ff .dot {
 
     #sparkle {
         position: absolute;
-        top: 490px;
-        left: 340px;    
+        top: 440px;
+        left: 380px;    
     }
 }
 
@@ -750,5 +750,11 @@ footer .footer-foot .right-ff .dot {
         transform: matrix(-1, 0, 0, 1, 0, 0);
         left: -180px;
         top: -70px;
+    }
+
+    #sparkle {
+        position: absolute;
+        top: 500px;
+        left: 250px;    
     }
 }
