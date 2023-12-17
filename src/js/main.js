@@ -1,5 +1,5 @@
-import { NAV_TOGGLER } from "./modules/elements.js";
-import { toggleMobilNav } from "./modules/nav.js";
+import { NAV_LINKS, NAV_TOGGLER } from "./modules/elements.js";
+import { setupNavLinks, toggleMobilNav } from "./modules/nav.js";
 
 function takeOffLoader(){
     const loader = document.getElementById('loader')
@@ -8,3 +8,4 @@ function takeOffLoader(){
 
 window.addEventListener('load', takeOffLoader)
 NAV_TOGGLER.addEventListener('click', toggleMobilNav)
+setupNavLinks()
