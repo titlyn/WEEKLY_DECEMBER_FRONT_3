@@ -710,6 +710,10 @@ footer .footer-foot .right-ff .dot {
         flex-direction: column;
         width: 100%;
     }
+
+    #available .page-head {
+        text-align: center;
+    }
 }
 
 @media only screen and (max-width: 680px) {
@@ -738,6 +742,10 @@ footer .footer-foot .right-ff .dot {
         top: 440px;
         left: 380px;    
     }
+
+    #available .page-head {
+        text-align: center;
+    }
 }
 
 @media only screen and (max-width: 450px) {
@@ -756,5 +764,8 @@ footer .footer-foot .right-ff .dot {
         position: absolute;
         top: 500px;
         left: 250px;    
+    }
+    #available .page-head {
+        text-align: center;
     }
 }
