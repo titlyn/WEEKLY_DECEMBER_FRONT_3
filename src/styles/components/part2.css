@@ -38,6 +38,10 @@
 
 #recent .recent-content .recent-card .left-card .right-card{
     text-align: left;
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 #recent .recent-content .foot-card {
@@ -108,8 +112,8 @@
 
 #sparkle-recent{
     position: absolute;
-    top: -15%;
-    right: -15%;
+    top: -120px;
+    right: -150px;
 }
 
 #sparkle-recent image{
@@ -236,6 +240,17 @@
     z-index: -1;
 }
 
+#sparkle-sponsor {
+    position: absolute;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    left: 430px;
+    top: -70px;
+}
+
+#sponsor .page-head {
+    position: relative;
+}
+
 #sponsor .bottom-cards h6 {
     color: var(--grey);
 }
@@ -267,7 +282,7 @@
 #article .article-content {
     display: flex;
     justify-content: center;
-    margin-top: 5rem;   
+    margin-top: 5rem; 
 }
 
 #article .article-card-content {
@@ -565,3 +580,175 @@ footer .footer-foot .right-ff .dot {
 }
 
 
+
+
+
+@media only screen and (max-width: 1600px) {
+	:root {
+		--horiz-padding: 9.5%;
+		--vert-padding: 2rem;
+		font-size: 16px;
+	}
+    #sparkle-sponsor {
+        position: absolute;
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+        left: 280px;
+        top: -70px;
+    }
+
+    #sponsor-star {
+        position: absolute;
+        right: -120px;
+        top: -60px;
+        z-index: -1;
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+	:root {
+		font-size: 14px;
+	}
+
+    #sparkle-sponsor {
+        position: absolute;
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+        left: 260px;
+        top: -70px;
+    }
+
+    #sponsor-star {
+        position: absolute;
+        right: -130px;
+        top: -60px;
+        z-index: -1;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+	:root {
+		font-size: 12px;
+		--horiz-padding: 8%;
+		--vert-padding: 2rem;
+	}
+
+    #sparkle-sponsor {
+        position: absolute;
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+        left: 130px;
+        top: -70px;
+    }
+
+    #sponsor-star {
+        position: absolute;
+        right: -130px;
+        top: -60px;
+        z-index: -1;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+	:root {
+		--horiz-padding: 4%;
+		--vert-padding: 4rem;
+		font-size: 12px;
+	}
+
+    #recent .recent-content {
+        flex-direction: column;
+    }
+
+    #phone1, #phone2 {
+        visibility: hidden;
+    }
+
+    #sparkle-recent {
+        top: -120px;
+        right: -150px;
+    }
+
+    #sparkle-sponsor {
+        position: absolute;
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+        left: -80px;
+        top: -70px;
+    }
+    #sponsor-star {
+        position: absolute;
+        right: -70px;
+        top: -5px;
+        z-index: -1;
+    }
+
+    #sponsor-tornado {
+        position: absolute;
+        bottom: -60px;
+        left: 120px;
+        z-index: -1;
+    }
+
+    #sponsor .sponsor-content .sponsor-card-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #sponsor .sponsor-content .sponsor-card-content .top-cards , .bottom-cards{
+        flex-direction: column;
+        align-items: center;
+        margin: 5rem 0 0 0;
+    }
+
+    #sponsor .sponsor-content .sponsor-card-content .top-cards .sponsor-card {
+        width: 60%;
+    }
+
+    #sponsor .sponsor-content .sponsor-card-content .bottom-cards .sponsor-card {
+        width: 60%;
+    }
+
+    footer .footer-content {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+	:root {
+		--vert-padding: 4rem;
+		--horiz-padding: 30px;
+	}
+
+    #sparkle-sponsor {
+        position: absolute;
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+        left: -130px;
+        top: -70px;
+    }
+
+    #recent .recent-content .left-card {
+        flex-direction: column;
+    }
+
+    #article .article-card-content {
+        flex-direction: column;
+    }
+
+    #sparkle {
+        position: absolute;
+        top: 450px;
+        left: 390px;    
+    }
+}
+
+@media only screen and (max-width: 450px) {
+	:root {
+		--horiz-padding: 20px;
+	}
+
+    #sparkle-sponsor {
+        position: absolute;
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+        left: -180px;
+        top: -70px;
+    }
+}
